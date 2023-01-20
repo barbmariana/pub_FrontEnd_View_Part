@@ -1,4 +1,5 @@
 import React from 'react';
+import Template from '../../componentes/Template/Template';
 
 
 class Home extends React.Component {
@@ -6,9 +7,7 @@ class Home extends React.Component {
 
     render() {
         return (
-            <div>
-                HOME PAGE
-            </div>
+            <Template></Template>
         )
     }
 }

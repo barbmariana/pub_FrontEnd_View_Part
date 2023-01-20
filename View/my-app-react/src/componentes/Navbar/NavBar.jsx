@@ -1,8 +1,11 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import imagLogo from '../../assets/images/logo.png'
 import botaoMenu from '../../assets/images/botaoMenu.png'
-import estilos from "./navbar.module.css"
+import '../Navbar/navbar.css'
+import estilos from "../Navbar/navbar.css?inline"
+import { NavLink } from 'react-router-dom'
+
+
 
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(false)
@@ -12,30 +15,30 @@ const Navbar = () => {
   }
 
   return (
-    <nav className={estilos.navbar}>
-      <div className={estilos.container}>
-        <div className={estilos.logo}>
-          <img src={imagLogo} />
+    <nav className="navbar">
+      <div className="container">
+        <div className="logo">
+          <img src={imagLogo}/>
         </div>
-        <div className={estilos.menuIcon} onClick={handleShowNavbar}>
-          <img src={botaoMenu} />
+        <div className="menu-icon" onClick={handleShowNavbar}>
+            <img src={botaoMenu}/>
         </div>
-        <div className= {showNavbar ? '': estilos.navElements}>
+        <div className={`nav-elements  ${showNavbar && 'active'}`}>
           <ul>
             <li>
-              <Link to="/">Sobre Nós</Link>
+              <NavLink to="/">Sobre Nós</NavLink>
             </li>
             <li>
-              <Link to="/produtos">Produtos</Link>
+              <NavLink to="/produtos">Produtos</NavLink>
             </li>
             <li>
-              <Link to="/eventos">Eventos</Link>
+              <NavLink to="/eventos">Eventos</NavLink>
             </li>
             <li>
-              <Link to="/contato">Contato</Link>
+              <NavLink to="/contato">Contato</NavLink>
             </li>
             <li className={estilos.reservaItem}>
-              <Link to="/contact" >Reserva</Link>
+              <NavLink to="/reserva" >Reserva</NavLink>
             </li>
           </ul>
         </div>

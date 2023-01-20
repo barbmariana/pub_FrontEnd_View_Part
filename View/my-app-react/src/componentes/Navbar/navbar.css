@@ -23,46 +23,48 @@ body {
   position: relative;
 }
 
-.logo {}
+.logo {
 
-.logo img {
-  height: 30px;
+}
+.logo img{
+    height: 30px;
 }
 
-.menuIcon {
+.menu-icon {
   display: none;
 }
 
-.navElements {}
+.nav-elements {
+}
 
-.navElements ul {
+.nav-elements ul {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
 }
 
-.navElements ul li:not(:last-child) {
+.nav-elements ul li:not(:last-child) {
   margin-right: 60px;
 }
 
-.navElements ul a {
+.nav-elements ul a {
   font-size: 16px;
   font-weight: 400;
   color: #D3DAD5;
   text-decoration: none;
 }
 
-.navElements ul a.active {
+.nav-elements ul a.active {
   color: #D3DAD5;
   font-weight: 500;
   position: relative;
 }
 
-.reservaItem {
-  background-color: #C3A99D;
+.reservaItem{
+    background-color: #C3A99D;
 }
 
-.navElements ul a.active::after {
+.nav-elements ul a.active::after {
   content: '';
   position: absolute;
   bottom: -4px;
@@ -73,18 +75,18 @@ body {
 }
 
 @media (max-width: 768px) {
-  .navElements ul li:not(:last-child) {
+  .nav-elements ul li:not(:last-child) {
     margin-right: 30px;
   }
 }
 
 @media (max-width: 600px) {
-  .menuIcon {
+  .menu-icon {
     display: block;
     cursor: pointer;
   }
 
-  .navElements {
+  .nav-elements {
     position: absolute;
     right: 0;
     top: 60px;
@@ -95,16 +97,16 @@ body {
     overflow: hidden;
   }
 
-  .navElements.active {
+  .nav-elements.active {
     width: 270px;
   }
 
-  .navElements ul {
+  .nav-elements ul {
     display: flex;
     flex-direction: column;
   }
 
-  .navElements ul li {
+  .nav-elements ul li {
     margin-right: unset;
     margin-top: 22px;
   }
