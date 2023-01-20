@@ -20,7 +20,7 @@ const Navbar = () => {
         <div className={estilos.menuIcon} onClick={handleShowNavbar}>
           <img src={botaoMenu} />
         </div>
-        <div className={`navElements  ${showNavbar && 'active'}`}>
+        <div className= {showNavbar ? '': estilos.navElements}>
           <ul>
             <li>
               <Link to="/">Sobre Nós</Link>
