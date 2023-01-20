@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import imagLogo from '../../assets/images/logo.png'
-import botaoMenu from '../../assets/images/botao.png'
+import botaoMenu from '../../assets/images/botaoMenu.png'
 import estilos from "./navbar.module.css"
 
 const Navbar = () => {
