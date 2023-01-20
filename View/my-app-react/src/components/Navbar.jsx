@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import imagLogo from '../assets/images/logo.png'
-import  botaoMenu from '../assets/images/botao.png'
+import  botaoMenu from '../assets/images/botaoMenu.png'
 import '../styles/navbar.css'
 import estilos from '../styles/navbar.css'
 
@@ -36,7 +36,7 @@ const Navbar = () => {
               <NavLink to="/contato">Contato</NavLink>
             </li>
             <li className={estilos.reservaItem}>
-              <NavLink to="/contact" >Reserva</NavLink>
+              <NavLink to="/reserva" >Reserva</NavLink>
             </li>
           </ul>
         </div>

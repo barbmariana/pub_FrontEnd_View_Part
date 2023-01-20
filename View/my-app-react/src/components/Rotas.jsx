@@ -13,8 +13,10 @@ class Rotas extends React.Component{
        return <BrowserRouter>
             <Routes>
                 <Route path='/' element={<Home></Home>}></Route>
-                <Route></Route>
-                <Route></Route>
+                <Route path='/produtos' element={<Home></Home>}></Route>
+                <Route path='/eventos' element={<Home></Home>}></Route>
+                <Route path='/contato' element={<Home></Home>}></Route>
+                <Route path='/reserva' element={<Home></Home>}></Route>
             </Routes>
         </BrowserRouter>
     }
