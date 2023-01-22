@@ -23,19 +23,17 @@ body {
   position: relative;
 }
 
-.logo {
+.logo {}
 
-}
-.logo img{
-    height: 30px;
+.logo img {
+  height: 30px;
 }
 
 .menu-icon {
   display: none;
 }
 
-.nav-elements {
-}
+.nav-elements {}
 
 .nav-elements ul {
   display: flex;
@@ -60,8 +58,8 @@ body {
   position: relative;
 }
 
-.reservaItem{
-    background-color: #C3A99D;
+.reservaItem {
+  background-color: #C3A99D;
 }
 
 .nav-elements ul a.active::after {

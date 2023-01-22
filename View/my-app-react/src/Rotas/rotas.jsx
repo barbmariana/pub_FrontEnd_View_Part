@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from '../Telas/Home/Home';
 import Eventos from '../Telas/Eventos/Evento';
 import Template from '../componentes/Template/Template';
+import Administrador from '../Telas/Administrador/Administrador';
 
 
 
@@ -15,6 +16,7 @@ class Rotas extends React.Component {
                     <Routes>
                         <Route path='/' element={<Home />} />
                         <Route path='/eventos' element={<Eventos />} />
+                        <Route path='/administrador/private' element={<Administrador />} />
                     </Routes>
                 </Template>
             </BrowserRouter>

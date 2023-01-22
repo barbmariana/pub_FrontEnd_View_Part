@@ -1,0 +1,14 @@
+.modal {
+    width: 100%;
+    position: absolute;
+    top: 15%;
+}
+
+.modal p {
+    padding: 0.2rem;
+}
+
+.modalCard {
+    box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.42);
+    border-radius: 8px;
+}

@@ -18,10 +18,10 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container">
         <div className="logo">
-          <img src={imagLogo}/>
+          <img src={imagLogo} />
         </div>
         <div className="menu-icon" onClick={handleShowNavbar}>
-            <img src={botaoMenu}/>
+          <img src={botaoMenu} />
         </div>
         <div className={`nav-elements  ${showNavbar && 'active'}`}>
           <ul>

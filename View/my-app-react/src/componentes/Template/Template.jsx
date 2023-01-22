@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from 'reactstrap';
+//import { Container } from 'reactstrap';
 import Navbar from '../Navbar/NavBar';
 import Footer from '../Footer/Footer'
 
@@ -10,11 +10,11 @@ class Template extends React.Component {
     }
     render() {
         return (
-            <Container fluid>
+            <div>
                 <Navbar />
                 {this.props.children}
                 <Footer />
-            </Container>
+            </div>
         )
     }
 }

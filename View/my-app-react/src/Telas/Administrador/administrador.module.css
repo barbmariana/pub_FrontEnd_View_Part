@@ -1,0 +1,25 @@
+.container {
+    height: 100vh;
+    background-image: url("../../assets/images/bgAdministrador.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: fill;
+
+}
+
+.Input {
+    border: 0 !important;
+    border-bottom: 2px solid gray !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    color: #fff !important;
+
+}
+
+.Input:focus:placeholder-shown {
+    font-size: 10pt;
+}
+
+.Input::placeholder {
+    color: #fff !important;
+}
