@@ -1,3 +1,4 @@
+
 .container {
     height: 100vh;
     background-image: url("../../assets/images/bgAdministrador.svg");
@@ -9,7 +10,7 @@
 
 .Input {
     border: 0 !important;
-    border-bottom: 2px solid gray !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.247) !important;
     background: transparent !important;
     border-radius: 0 !important;
     color: #fff !important;
@@ -21,5 +22,5 @@
 }
 
 .Input::placeholder {
-    color: #fff !important;
+    color: rgba(255, 255, 255, 0.705) !important;
 }

@@ -10,13 +10,14 @@ class Modal extends React.Component {
         super(props)
         this.props.bgColor;
         this.props.color;
-        this.props.classModal
-        this.props.id
+        this.props.classModal;
+        this.props.id;
+        this.props.display;
     }
 
     render() {
         return (
-            <Row id={this.props.id} className={`${style.modal} justify-content-center`}>
+            <Row id={this.props.id} className={`${this.props.display ? style.modal : style.modalDisable} justify-content-center `}>
                 <Col className={`${style.modalCard} ${this.props.classModal}`} style={{ background: `${this.props.bgColor}`, color: `${this.props.color}` }}>
                     <p>Login ou senha estão incorretos. Caso persista você pode não conter permissão ou acesso a esta página entre em contato com os responsáveis.</p>
                 </Col>

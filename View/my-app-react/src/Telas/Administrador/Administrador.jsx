@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Button, Input, Col, Row, Form, FormGroup, Label, } from 'reactstrap'
+import { Container, Input, Col, Row, Form, FormGroup, Label, } from 'reactstrap'
 import style from './administrador.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Botao from "../../componentes/Botao/Botao.jsx";
@@ -26,6 +26,7 @@ class Administrador extends React.Component {
         }
         else {
             console.log("errou");
+            this.setState({showModal: true})
         }
     }
 
@@ -36,7 +37,9 @@ class Administrador extends React.Component {
     render() {
         return (
             <Container fluid className={`${style.container}`}>
-                {this.state.showModal && <Modal id="meuModal" bgColor="#FC6D6D" color="#fff" classModal="col-10" />}
+                {this.state.showModal && 
+                    <Modal id="meuModal" bgColor="#FC6D6D" color="#fff" classModal="col-10 col-md-6 col-lg-5 col-xl-4 col-xxl-3" display={this.state.showModal}/>
+                }
                 <Form>
                     <FormGroup>
                         <Row className="vh-100 justify-content-center align-items-center">

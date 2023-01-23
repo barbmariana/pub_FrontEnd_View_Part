@@ -1,9 +1,24 @@
+
 .modal {
+    border-collapse: collapse;
+    border-spacing: 0;
+    max-width: 100%;
     width: 100%;
     position: absolute;
     top: 15%;
+    animation: modal 1s;
+    
 }
 
+
+@keyframes modal {
+    from{
+       translate: 0 -500px;
+    }
+    to{
+       translate: 0 0px;
+    }
+}
 .modal p {
     padding: 0.2rem;
 }
@@ -11,4 +26,9 @@
 .modalCard {
     box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.42);
     border-radius: 8px;
+}
+
+.modalDisable{
+    transition: all ease 2s;
+    
 }
