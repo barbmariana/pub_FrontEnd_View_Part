@@ -1,4 +1,3 @@
-
 .modal {
     border-collapse: collapse;
     border-spacing: 0;
@@ -6,19 +5,21 @@
     width: 100%;
     position: absolute;
     top: 15%;
-    animation: modal 1s;
-    
+    animation: modal 0.5s;
+
 }
 
 
 @keyframes modal {
-    from{
-       translate: 0 -500px;
+    from {
+        translate: 0 -500px;
     }
-    to{
-       translate: 0 0px;
+
+    to {
+        translate: 0 0px;
     }
 }
+
 .modal p {
     padding: 0.2rem;
 }
@@ -28,7 +29,27 @@
     border-radius: 8px;
 }
 
-.modalDisable{
-    transition: all ease 2s;
-    
+.modalDisable {
+    display: none;
+}
+
+.closeButton {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding: 0.2rem 0 0 0;
+}
+
+.closeButton button {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    font-weight: 600;
+
+    border: 0;
+
+}
+
+.closeButton button svg {
+    fill: #fff;
 }

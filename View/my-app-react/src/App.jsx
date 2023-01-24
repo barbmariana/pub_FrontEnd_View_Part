@@ -1,10 +1,15 @@
 
+import { ModalContextProvider } from './Contexts/modalContext'
 import Rotas from './Rotas/rotas'
 
 
 function App() {
   return (
-    <Rotas />
+    <ModalContextProvider>
+      <Rotas />
+    </ModalContextProvider>
+
+
   )
 }
 

@@ -3,6 +3,7 @@ import { Container, Input, Col, Row, Form, FormGroup, Label, } from 'reactstrap'
 import style from './administrador.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Botao from "../../componentes/Botao/Botao.jsx";
+import ModalContext from "../../Contexts/modalContext";
 import Modal from "../../componentes/Modal/Modal";
 class Administrador extends React.Component {
     constructor() {
@@ -12,10 +13,8 @@ class Administrador extends React.Component {
         this.state = {
             inputLogin: "",
             inputSenha: "",
-            showModal: true,
 
         }
-
         this.Autenticacao = this.Autenticacao.bind(this);
         this.getInputLogin = this.getInputLogin.bind(this)
     }
@@ -25,8 +24,7 @@ class Administrador extends React.Component {
             console.log("acertou");
         }
         else {
-            console.log("errou");
-            this.setState({showModal: true})
+            this.context.displayShow()
         }
     }
 
@@ -37,9 +35,7 @@ class Administrador extends React.Component {
     render() {
         return (
             <Container fluid className={`${style.container}`}>
-                {this.state.showModal && 
-                    <Modal id="meuModal" bgColor="#FC6D6D" color="#fff" classModal="col-10 col-md-6 col-lg-5 col-xl-4 col-xxl-3" display={this.state.showModal}/>
-                }
+                <Modal id="meuModal" bgColor="#FC6D6D" color="#fff" classModal="col-10 col-md-6 col-lg-5 col-xl-4 col-xxl-3" />
                 <Form>
                     <FormGroup>
                         <Row className="vh-100 justify-content-center align-items-center">
@@ -74,5 +70,5 @@ class Administrador extends React.Component {
         )
     }
 }
-
+Administrador.contextType = ModalContext;
 export default Administrador;
