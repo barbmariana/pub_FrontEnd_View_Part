@@ -1,5 +1,5 @@
 import React from 'react';
-import Template from '../../componentes/Template/Template';
+import CarrosselHome from '../../componentes/CarrosselHome/CarrosselHome';
 
 
 class Home extends React.Component {
@@ -7,9 +7,7 @@ class Home extends React.Component {
 
     render() {
         return (
-            <div>
-                <p>Home Page</p>
-            </div>
+              <CarrosselHome text-danger={['Pub Blinders', 'Produtos', 'Eventos']}></CarrosselHome>
         )
     }
 }
