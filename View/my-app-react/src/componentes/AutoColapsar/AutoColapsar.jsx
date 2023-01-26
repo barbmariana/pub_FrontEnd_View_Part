@@ -13,6 +13,7 @@ class AutoColapsar extends React.Component {
                     <Row className='slideRight'>
                         <Col sm={{offset: 3, order: 2, size: 6}}>
                             <img src="#" className='img-E' alt="Whisky 1" />
+                            <img src="#" className='img-E' alt="Whisky 1" />
                         </Col>
                     </Row>
                     <Row className='slideLeft'>
