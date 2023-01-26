@@ -14,8 +14,6 @@ import img3 from '../../assets/images/carrossel3.png';
 
 
 
-
-
 const items = [
   {
     id: 1,
