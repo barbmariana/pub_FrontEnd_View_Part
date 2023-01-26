@@ -1,0 +1,22 @@
+.caixaRotulos{
+    width: 100% ;
+    background-color: #0c2b2aed;
+}
+.caixaRotulos img{
+    width: 100%;
+    object-fit: cover;
+}
+
+@media screen and (min-width:500px) {
+    .caixaRotulos img{
+        height: 380px;
+        object-fit: cover;
+        object-position: center;
+        
+    }
+    .caixaSobreTexto{
+        margin-left:50px !important;
+    }
+
+    
+}
