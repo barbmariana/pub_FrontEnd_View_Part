@@ -1,13 +1,15 @@
 import React from "react";
-import { Container, Input, Col, Row, Form, FormGroup, Label, } from 'reactstrap'
+import { Container, Input, Col, Row, Form, FormGroup, Label, } from 'reactstrap';
 import style from './administrador.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Botao from "../../componentes/Botao/Botao.jsx";
 import ModalContext from "../../Contexts/modalContext";
 import Modal from "../../componentes/Modal/Modal";
+import { useNavigate } from 'react-router-dom'
+
 class Administrador extends React.Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.login = "Resilia";
         this.senha = "Resilia";
         this.state = {
@@ -21,10 +23,12 @@ class Administrador extends React.Component {
 
     Autenticacao() {
         if (this.login == this.state.inputLogin) {
-            console.log("acertou");
+            this.props.navigate("/administrador/private/gerenciamento")
         }
         else {
+
             this.context.displayShow()
+
         }
     }
 
@@ -35,7 +39,7 @@ class Administrador extends React.Component {
     render() {
         return (
             <Container fluid className={`${style.container}`}>
-                <Modal id="meuModal" bgColor="#FC6D6D" color="#fff" classModal="col-10 col-md-6 col-lg-5 col-xl-4 col-xxl-3" />
+                <Modal title="Login ou senha estão incorretos. Caso persista você pode não conter permissão ou acesso a esta página entre em contato com os responsáveis." id="meuModal" bgColor="#FC6D6D" color="#fff" classModal="col-10 col-md-6 col-lg-5 col-xl-4 col-xxl-3" />
                 <Form>
                     <FormGroup>
                         <Row className="vh-100 justify-content-center align-items-center">
@@ -71,4 +75,7 @@ class Administrador extends React.Component {
     }
 }
 Administrador.contextType = ModalContext;
-export default Administrador;
+export default function RouterAdministrador(props) {
+    const navigate = useNavigate()
+    return (<Administrador navigate={navigate}></Administrador>)
+}

@@ -1,0 +1,14 @@
+.container {
+    height: 100vh;
+    background-image: url("../../assets/images/bgAdministrador.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: fill;
+}
+
+.titles p {
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.buttons {}
