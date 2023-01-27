@@ -1,0 +1,12 @@
+.containerTP {
+	margin-bottom: 100px;
+}
+.btn {
+    --bs-btn-border-radius: 0rem;
+}
+
+table {
+    background-color: rgb(39, 89, 87);
+    text-align: center;
+    --bs-table-color: white;
+}

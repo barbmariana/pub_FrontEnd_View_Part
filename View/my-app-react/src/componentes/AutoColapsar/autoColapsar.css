@@ -1,8 +1,14 @@
-.container-fluid {
-    padding: 0;
+.containerAC {
+	margin-top: 100px;
+}
+
+.img-E, .img-D {
+	height: 300px;
+	border-radius: 10px;
 }
 
 .slideRight {
+	margin-top: 0px;
 	animation-name: slideRight;
 	-webkit-animation-name: slideRight;	
 
@@ -16,9 +22,6 @@
 	0% {
 		transform: translateX(-150%);
 	}			
-	50% {
-		transform: translateX(-50%);
-	}			
 	100% {
 		transform: translateX(0%);
 	}	
@@ -27,9 +30,6 @@
 @-webkit-keyframes slideRight {
 	0% {
 		transform: translateX(-150%);
-	}			
-	50% {
-		transform: translateX(-50%);
 	}			
 	100% {
 		transform: translateX(0%);
@@ -50,9 +50,6 @@
 	0% {
 		transform: translateX(150%);
 	}
-	50%{
-		transform: translateX(50%);
-	}
 	100% {
 		transform: translateX(0%);
 	}
@@ -62,45 +59,7 @@
 	0% {
 		transform: translateX(150%);
 	}
-	50%{
-		transform: translateX(50%);
-	}
 	100% {
 		transform: translateX(0%);
 	}
-}
-
-.fadeIn{
-	animation-name: fadeIn;
-	-webkit-animation-name: fadeIn;	
-
-	animation-duration: 2.5s;	
-	-webkit-animation-duration: 2.5s;
-
-	animation-timing-function: ease-in-out;	
-	-webkit-animation-timing-function: ease-in-out;		
-
-	visibility: visible !important;	
-}
-
-@keyframes fadeIn {
-	0% {
-		transform: scale(0);
-		opacity: 0.0;		
-	}
-	100% {
-		transform: scale(1);
-		opacity: 1;	
-	}		
-}
-
-@-webkit-keyframes fadeIn {
-	0% {
-		-webkit-transform: scale(0);
-		opacity: 0.0;		
-	}
-	100% {
-		-webkit-transform: scale(1);
-		opacity: 1;	
-	}		
 }
