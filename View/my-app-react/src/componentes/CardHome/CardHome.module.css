@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 .caixaCards{
     width: 100%;
     display: flex;
@@ -10,4 +12,8 @@
     height: 200px;
     object-fit: cover;
 
+}
+
+.cardUnico h5{
+    font-weight: 600;
 }
