@@ -11,6 +11,7 @@ import {
 import img1 from'../../assets/images/carrossel1.png';
 import img2 from '../../assets/images/carrossel2.png';
 import img3 from '../../assets/images/carrossel3.png';
+import '../CarrosselHome/CarrosselHome.module.css'
 
 
 
@@ -86,6 +87,7 @@ function CarrosselHome(props) {
               max-width: 100%;
               height: 500px;
               background: black;
+             
 
             }
             .custom-tag img{
@@ -94,11 +96,14 @@ function CarrosselHome(props) {
               object-fit: cover;
             }
             .text-danger h3 {
-              font-family: 'Poppins', sans-serif;
+              font-family: 'Almarai', sans-serif;
+              font-weight:700;
+              text-shadow: 1px 1px 3px rgb(0, 0, 0), 0 0 1em rgba(0, 255, 191, 0.21), 0 0 0.1em rgba(3, 248, 244, 0.21);
               color: white;
             }
             .text-danger p{
-              font-family: 'Poppins', sans-serif;
+              font-family: 'Almarai', sans-serif;
+              text-shadow: 1px 1px 3px rgb(0, 0, 0), 0 0 1em rgba(0, 255, 191, 0.364), 0 0 0.2em rgba(3, 248, 244, 0.31);
               color:white;
             }`}
       </style>

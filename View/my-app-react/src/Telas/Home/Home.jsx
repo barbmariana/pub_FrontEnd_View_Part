@@ -11,7 +11,7 @@ class Home extends React.Component {
     render() {
         return (
               <div>
-                <CarrosselHome text-danger={['Pub Blinders', 'Produtos', 'Eventos']}></CarrosselHome>
+                <CarrosselHome></CarrosselHome>
                 <SobreHome></SobreHome>
                 <ListaRotulos></ListaRotulos>
                 <CardHome></CardHome>

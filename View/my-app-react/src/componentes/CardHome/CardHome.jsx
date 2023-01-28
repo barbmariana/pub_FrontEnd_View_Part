@@ -44,7 +44,7 @@ class CardHome extends React.Component{
             <img alt={card.info} src={card.img}/>
             <CardTitle tag='h5'>{card.nome}</CardTitle>
             <CardText>{card.info}</CardText>
-            <Button>Ver Mais</Button>
+            <Button className={style.botaoCard}>Ver Mais</Button>
             </Card></Col>)
         })
 
