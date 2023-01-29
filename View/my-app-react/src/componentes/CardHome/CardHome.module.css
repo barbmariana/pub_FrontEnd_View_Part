@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+
+.caixaCards{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Almarai', sans-serif;
+    text-align: center;
+}
+
+
+.cardUnico img{
+    height: 200px;
+    object-fit: cover;
+
+}
+
+.cardUnico h5{
+    font-weight: 700;
+}
+
+.botaoCard{
+    text-align: center;
+    height: 60px;
+    width: 300px;
+    color:white;
+    background-color: #3E515A !important;
+}
+.botaoCard:hover{
+    background-color: #27404b!important;
+    transition: 0.75s;
+    transform: scale(1.05);
+}

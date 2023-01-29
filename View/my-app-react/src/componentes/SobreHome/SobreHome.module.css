@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+
+
+.caixaSobre{
+    width: 80%;
+    margin: 20px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Almarai', sans-serif;
+
+}
+
+.caixaSobreTexto{
+    text-align: center;
+}
+.caixaSobreBotao{
+    align-self: center;
+}
+
+.botaoReserva{
+    text-align: center;
+    height: 60px;
+    width: 300px;
+    color:white;
+    background-color: #3E515A !important;
+}
+.botaoReserva:hover{
+    background-color: #27404b!important;
+    transition: 0.75s;
+    transform: scale(1.1);
+}
+
+@media screen and (min-width:500px) {
+    .caixaSobre{
+        height: 300px;
+        
+    }
+    .caixaSobreTexto{
+        margin-left:50px !important;
+    }
+
+
+    
+}
