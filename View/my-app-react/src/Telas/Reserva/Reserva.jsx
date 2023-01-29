@@ -2,7 +2,7 @@ import React from "react";
 // bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 // reactstrap
-import { Container, Row, Col, Button, Modal, ModalHeader, ModalBody } from "reactstrap";
+import { Container, Row, Col, Modal, ModalHeader, ModalBody } from "reactstrap";
 //css
 import style from './estilo.module.css';
 //componentes
@@ -37,14 +37,25 @@ class Reserva extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    const url = 'https://pubresiliajson.onrender.com/Reserva';
+
     const reserva = {
       cliente: this.state.cliente,
       quantidadeDePessoas: this.state.quantidadeDePessoas,
       data: this.state.data,
       hora: this.state.hora,
       numeroMesa: this.state.numeroMesa
-    }
+    };
     console.log(reserva);
+
+    // fetch(url, {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(reserva),
+    // });
+
   }
 
   validateName({ target }) {
@@ -60,7 +71,9 @@ class Reserva extends React.Component {
   validateAmountOfPeople({ target }) {
     const input = document.querySelector('.inputAmountOfPeople');
     this.setState({ quantidadeDePessoas: target.value }, () => {
-      input.classList.add('is-valid');
+      Number(this.state.quantidadeDePessoas) <= 0
+        ? (input.classList.add('is-invalid'), input.classList.remove('is-valid'))
+        : (input.classList.add('is-valid'), input.classList.remove('is-invalid'))
     })
   }
 
@@ -105,7 +118,6 @@ class Reserva extends React.Component {
               {/* <label className="form-label">Quantidade de pessoas:</label> */}
               <input
                 placeholder="Quantidade de pessoas:"
-                min={1}
                 type="number"
                 className="form-control inputAmountOfPeople"
                 onChange={this.validateAmountOfPeople}
@@ -138,11 +150,11 @@ class Reserva extends React.Component {
                 onChange={({ target }) => this.setState({ numeroMesa: target.value })}
                 className="form-select" >
                 <option>Escolha uma mesa</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="1">Mesa n° 1</option>
+                <option value="2">Mesa n° 2</option>
+                <option value="3">Mesa n° 3</option>
+                <option value="4">Mesa n° 4</option>
+                <option value="5">Mesa n° 5</option>
               </select>
             </Row>
 
@@ -153,7 +165,6 @@ class Reserva extends React.Component {
           </form>
         </Container>
         <div>
-          <Button color="danger" onClick={this.toggle}>{this.props.buttonLabel}</Button>
           <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
             <ModalHeader toggle={this.toggle}>Reserva realizada.</ModalHeader>
             <ModalBody>

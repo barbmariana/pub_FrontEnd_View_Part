@@ -1,0 +1,11 @@
+.box {
+  height: 500px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.contact-sections {
+  background-color: #ccc;
+  border: 2px solid black;
+}
