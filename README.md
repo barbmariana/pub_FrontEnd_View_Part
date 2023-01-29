@@ -23,11 +23,11 @@ Utilizar React para criar componentes para o site. Aprender a fazer requisiçõe
 
 
 ## Team /  Equipe 🧒
-Andrew:<br>
-Fabricio:<br>
+Andrew: github.com/AndrewDeras <br>
+Fabricio: github.com/FabricioSalema <br>
 Mariana: github.com/barbmariana <br>
-Ruan: <br>
-Wesley: <br>
+Ruan: github.com/ruanthow <br>
+Wesley: github.com/wesleyrick <br>
 
 
 ## Tools / Tecnologias 🌐
