@@ -6,7 +6,9 @@ import Template from '../componentes/Template/Template';
 import Produtos from '../Telas/Produtos/Pordutos';
 import RouterAdministrador from '../Telas/Administrador/Administrador';
 import Gerenciamento from '../Telas/Gerenciamento/Gerenciamento';
-
+import RouterCreate from '../Telas/Gerenciamento/Create/Create';
+import RouterDelete from '../Telas/Gerenciamento/Delete/Delete';
+import RouterUpdate from '../Telas/Gerenciamento/Update/Update';
 
 
 class Rotas extends React.Component {
@@ -21,6 +23,9 @@ class Rotas extends React.Component {
                         <Route path='/produtos' element={<Produtos />} />
                         <Route path='/administrador/private' element={<RouterAdministrador />} />
                         <Route path='/administrador/private/gerenciamento' element={<Gerenciamento />} />
+                        <Route path='/administrador/private/gerenciamento/create' element={<RouterCreate />} />
+                        <Route path='/administrador/private/gerenciamento/delete' element={<RouterDelete />} />
+                        <Route path='/administrador/private/gerenciamento/update' element={<RouterUpdate />} />
                     </Routes>
                 </Template>
             </BrowserRouter>
