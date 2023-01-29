@@ -97,6 +97,7 @@ body {
 
   .nav-elements.active {
     width: 270px;
+    z-index: 9999;
   }
 
   .nav-elements ul {
