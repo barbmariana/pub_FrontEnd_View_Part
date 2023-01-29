@@ -19,10 +19,10 @@ class Footer extends React.Component {
                     <img src={imagLogo} alt="Imagem do logo" />
                     <ul>
                         <a href="/"><li>Sobre Nós</li></a>
-                        <a href="/"><li>Produtos</li></a>
-                        <a href="/"><li>Eventos</li></a>
-                        <a href="/"><li>Contato</li></a>
-                        <a href="/"><li>Reserva</li></a>
+                        <a href="/produtos"><li>Produtos</li></a>
+                        <a href="/eventos"><li>Eventos</li></a>
+                        <a href="/contato"><li>Contato</li></a>
+                        <a href="/reserva"><li>Reserva</li></a>
                         <a href="/administrador/private"><li>Administrador</li></a>
                     </ul>
                 </div>

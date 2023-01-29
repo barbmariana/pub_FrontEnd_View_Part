@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container">
         <div className="logo">
-          <img src={imagLogo} />
+          <a href="/"><img src={imagLogo} /></a>
         </div>
         <div className="menu-icon" onClick={handleShowNavbar}>
           <img src={botaoMenu} />
