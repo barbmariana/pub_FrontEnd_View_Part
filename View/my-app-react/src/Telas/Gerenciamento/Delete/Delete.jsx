@@ -18,6 +18,7 @@ class Delete extends React.Component {
         }
         this.Back = this.Back.bind(this)
         this.Verificacao = this.Verificacao.bind(this)
+        this.changeOption = this.changeOption.bind(this)
 
     }
 
@@ -33,14 +34,29 @@ class Delete extends React.Component {
 
     Verificacao() {
         if (!isNaN(this.state.id)) {
-            axios.delete(`https://pubresiliajson.onrender.com/${this.state.option}/${this.state.id}`).
-                then(() => {
-                    alert(`${this.state.option} deletado/a com sucesso`)
-                    this.Back()
-                }).catch((error) => {
-                    alert(`Algo deu errado insira um id valido ou contate o adm master \n ${error}`)
-                    this.Back()
-                })
+            switch (this.state.option) {
+                case "Outras Bebidas":
+                    axios.delete(`https://pubresiliajson.onrender.com/OutrasBebidas/${this.state.id}`).
+                        then(() => {
+                            alert(`${this.state.option} deletado/a com sucesso`)
+                            this.Back()
+                        }).catch((error) => {
+                            alert(`Algo deu errado insira um id valido ou contate o adm master \n ${error}`)
+                            this.Back()
+                        })
+                    break;
+
+                default:
+                    axios.delete(`https://pubresiliajson.onrender.com/${this.state.option}/${this.state.id}`).
+                        then(() => {
+                            alert(`${this.state.option} deletado/a com sucesso`)
+                            this.Back()
+                        }).catch((error) => {
+                            alert(`Algo deu errado insira um id valido ou contate o adm master \n ${error}`)
+                            this.Back()
+                        })
+                    break;
+            }
         }
         else {
             alert("Digite um numero de id valído");
