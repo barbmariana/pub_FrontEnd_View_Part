@@ -1,6 +1,6 @@
 # React Website - Pub Blinders 💻	
 
-Creating a website using react for a new pub bar and use a JSON server to make HTTP requests.
+Creating a website using React for a new pub bar and use a JSON server to make HTTP requests.
 
 (pt-br)
 Criação de website usando o react para um novo pub e uso de um JSON server para fazer requisições HTTP.  
@@ -17,7 +17,7 @@ Utilizando React components, construimos um website para um pub. Nosso pub tem i
 
 ## Goal / Objetivo do projeto 📍
 
-Use React to create the components. Learn about API's, how to make requests and about JSON server. 
+Use React tools to create the components. Learn about API's, how to make requests and about JSON server. 
 
 (pt-br)
 Utilizar React para criar componentes para o site. Aprender a fazer requisições e aprender sobre JSON server.  
