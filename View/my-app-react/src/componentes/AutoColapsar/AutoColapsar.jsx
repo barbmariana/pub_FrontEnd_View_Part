@@ -1,120 +1,118 @@
-import React from 'react';
-import './autoColapsar.css'
+import React, {useEffect, useState} from 'react';
+import css from './autoColapsar.module.css';
 import { Container, Row, Col } from 'reactstrap';
 import TabelaProdutos from '../TabelasProdutos/TabelasProdutos';
+import api from '../../Api/Api';
 
-class AutoColapsar extends React.Component {
 
+export default function AutoColapsar () {
+        const [tipos, setTipos] = useState();
+        let categorias = [];
+        let cards = [];
+        let keys = [];
 
-    render() {
-        return (
-              <Container fluid>
-                <Row className='Whiskys'>
-                    <Row className='slideRight'>
-                        <Col sm={{offset: 3, order: 2, size: 6}}>
-                            <img src="#" className='img-E' alt="Whisky 1" />
-                            <img src="#" className='img-E' alt="Whisky 1" />
+        useEffect(() => {
+            api.get("categorias")
+            .then((res) => setTipos(res.data))
+            .catch((err) => console.log(err));
+        }, []);
+        
+
+        {tipos?.map((tipo) => (
+            categorias.push(tipo.nome)
+        ))}
+
+            
+        for(let i = 0; i < categorias.length; i++) {
+            switch(categorias[i]){
+            case 'Whiskys':
+                cards.push(
+                    <Row className={`justify-content-center `}>
+                        <Col xxl="6" xs="6"  className={`${css.slideRight} ${css.backgroud1} d-flex justify-content-center align-items-center mt-5`}>
+                            <h1 className='tituloCard'>Wiskys</h1>                        
+                        </Col>
+                        <Col xxl="7" className={css.slideLeft}>
+                            <TabelaProdutos>{categorias[i]}</TabelaProdutos>
                         </Col>
                     </Row>
-                    <Row className='slideLeft'>
-                        <Col sm={{offset: 8, order: 2, size: 6}}>
-                            <img src="#" className='img-D' alt="whisky 2" />
+                    );
+                break;
+            case 'Charutos':
+                cards.push(
+                    <Row className={`justify-content-center `}>
+                        <Col xxl="6" xs="6" className={`${css.slideRight} ${css.backgroud3} d-flex justify-content-center align-items-center mt-5`}>
+                            <h1 className='tituloCard'>Charutos</h1>                        
                         </Col>
-                    </Row>
-                    <Row className='fadeIn'>
-                        <Col sm={{offset: 5, order: 2, size: 6}}>
+                        <Col xxl="7" className={css.slideLeft}>
                             <TabelaProdutos></TabelaProdutos>
                         </Col>
                     </Row>
-                </Row>
-                <Row className='Tequilas'>
-                    <Row className='slideRight'>
-                        <Col sm={{offset: 3, order: 2, size: 6}}>
-                            <img src="#" className='img-E' alt="Tequila 1" />
+                    );
+                break;
+            case 'Cigarros':
+                cards.push(
+                    <Row className={`justify-content-center `}>
+	
+                        <Col xxl="6" xs="6" className={`${css.slideRight} ${css.backgroud6} d-flex justify-content-center align-items-center mt-5`}>
+                            <h1 className='tituloCard'>Cigarros</h1>                        
                         </Col>
-                    </Row>
-                    <Row className='slideLeft'>
-                        <Col sm={{offset: 8, order: 2, size: 6}}>
-                            <img src="#" className='img-D' alt="Tequila 2" />
-                        </Col>
-                    </Row>
-                    <Row className='fadeIn'>
-                        <Col sm={{offset: 5, order: 2, size: 6}}>
+                        <Col xxl="7" className={`${css.slideLeft} mb-5`}>
                             <TabelaProdutos></TabelaProdutos>
                         </Col>
                     </Row>
-                </Row>
-                <Row className='Cervejas'>
-                    <Row className='slideRight'>
-                        <Col sm={{offset: 3, order: 2, size: 6}}>
-                            <img src="#" className='img-E' alt="Cerveja 1" />
+                    );
+                break;
+            case 'Drinks':
+                cards.push(
+                    <Row className={`justify-content-center `}>
+	
+                        <Col xxl="6" xs="6" className={`${css.slideRight} ${css.backgroud5} d-flex justify-content-center align-items-center mt-5`}>
+                            <h1 className='tituloCard'>Drinks</h1>                        
                         </Col>
-                    </Row>
-                    <Row className='slideLeft'>
-                        <Col sm={{offset: 8, order: 2, size: 6}}>
-                            <img src="#" className='img-D' alt="Cerveja 2" />
-                        </Col>
-                    </Row>
-                    <Row className='fadeIn'>
-                        <Col sm={{offset: 5, order: 2, size: 6}}>
+                        <Col xxl="7" className={css.slideLeft}>
                             <TabelaProdutos></TabelaProdutos>
                         </Col>
                     </Row>
-                </Row>
-                <Row className='Charutos'>
-                    <Row className='slideRight'>
-                        <Col sm={{offset: 3, order: 2, size: 6}}>
-                            <img src="#" className='img-E' alt="Charuto 1" />
+                    );
+                break;
+            case 'Comidas':
+                cards.push(
+                    <Row className={`justify-content-center `}>
+	
+                        <Col xxl="6" xs="6" className={`${css.slideRight} ${css.backgroud2} d-flex justify-content-center align-items-center mt-5`}>
+                            <h1 className='tituloCard'>Comidas</h1>                        
                         </Col>
-                    </Row>
-                    <Row className='slideLeft'>
-                        <Col sm={{offset: 8, order: 2, size: 6}}>
-                            <img src="#" className='img-D' alt="Charuto 2" />
-                        </Col>
-                    </Row>
-                    <Row className='fadeIn'>
-                        <Col sm={{offset: 5, order: 2, size: 6}}>
+                        <Col xxl="7" className={css.slideLeft}>
                             <TabelaProdutos></TabelaProdutos>
                         </Col>
                     </Row>
-                </Row>
-                <Row className='Cigarros'>
-                    <Row className='slideRight'>
-                        <Col sm={{offset: 3, order: 2, size: 6}}>
-                            <img src="#" className='img-E' alt="Cigarro 1" />
+                    );
+                break;
+            case 'OutrasBebidas':
+                cards.push(
+                    <Row className={`justify-content-center `}>
+	
+                        <Col xxl="6" xs="6" className={`${css.slideRight} ${css.backgroud4} d-flex justify-content-center align-items-center mt-5`}>
+                            <h1 className='tituloCard'>Bebidas</h1>                        
                         </Col>
-                    </Row>
-                    <Row className='slideLeft'>
-                        <Col sm={{offset: 8, order: 2, size: 6}}>
-                            <img src="#" className='img-D' alt="Cigarro 2" />
-                        </Col>
-                    </Row>
-                    <Row className='fadeIn'>
-                        <Col sm={{offset: 5, order: 2, size: 6}}>
+                        <Col xxl="7" className={css.slideLeft}>
                             <TabelaProdutos></TabelaProdutos>
                         </Col>
                     </Row>
-                </Row>
-                <Row className='Whiskys'>
-                    <Row className='slideRight'>
-                        <Col sm={{offset: 3, order: 2, size: 6}}>
-                            <img src="#" className='img-E' alt="Whisky 1" />
-                        </Col>
-                    </Row>
-                    <Row className='slideLeft'>
-                        <Col sm={{offset: 8, order: 2, size: 6}}>
-                            <img src="#" className='img-D' alt="whisky 2" />
-                        </Col>
-                    </Row>
-                    <Row className='fadeIn'>
-                        <Col sm={{offset: 5, order: 2, size: 6}}>
-                            <TabelaProdutos></TabelaProdutos>
-                        </Col>
-                    </Row>
-                </Row>
-              </Container>
-        )
-    }
+                    );
+                break;
+            default:
+                console.log(`deu ruim`);
+            }
+        }
+                    
+        // console.log(cards);
+
+        const app = (
+            <Container className={css.containerAC} fluid>
+                {cards}
+            </Container>
+        );
+        
+        return app;
 }
-
-export default AutoColapsar;
