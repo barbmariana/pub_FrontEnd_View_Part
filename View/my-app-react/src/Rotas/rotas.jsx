@@ -12,8 +12,6 @@ import Gerenciamento from '../Telas/Gerenciamento/Gerenciamento';
 import RouterCreate from '../Telas/Gerenciamento/Create/Create';
 import RouterDelete from '../Telas/Gerenciamento/Delete/Delete';
 import RouterUpdate from '../Telas/Gerenciamento/Update/Update';
-import Contatos from '../Telas/Contatos/Contatos'
-import Reserva from '../Telas/Reserva/Reserva'
 
 
 
