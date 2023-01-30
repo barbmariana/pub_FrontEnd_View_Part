@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const Api = axios.create({
-    baseURL: "https://jsonserver-senac.onrender.com/"
+    baseURL: "https://pubresiliajson.onrender.com/"
 });
 
 export default Api;

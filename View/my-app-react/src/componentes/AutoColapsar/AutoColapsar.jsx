@@ -1,37 +1,118 @@
 import React, {useEffect, useState} from 'react';
-import './autoColapsar.css';
+import css from './autoColapsar.module.css';
 import { Container, Row, Col } from 'reactstrap';
 import TabelaProdutos from '../TabelasProdutos/TabelasProdutos';
-import img from '../../assets/images/whisky.jpg';
 import api from '../../Api/Api';
 
+
 export default function AutoColapsar () {
-        const [produtos, setProdutos] = useState();
+        const [tipos, setTipos] = useState();
+        let categorias = [];
+        let cards = [];
+        let keys = [];
 
         useEffect(() => {
-            api.get("games")
-            .then((res) => setProdutos(res.data))
+            api.get("categorias")
+            .then((res) => setTipos(res.data))
             .catch((err) => console.log(err));
         }, []);
+        
 
-        return (
-            <Container className="containerAC" fluid>
-                {produtos?.map((produto) => (
-                    <Row className='Whiskys' key={produto.id}>
-                        {console.log(produto)}
-                        <Row className='slideRight'>
-                            <Col sm={{offset: 3, order: 2, size: 6}}>
-                                <img src={img} className='img-E ' alt="Whisky 1"/>
-                                {/* <h1>{produto.id}</h1> */}
-                            </Col>
-                        </Row>
-                        <Row className='slideLeft'>
-                            <Col sm={{offset: 2, order: 2, size:8}}>
-                                <TabelaProdutos></TabelaProdutos>
-                            </Col>
-                        </Row>
+        {tipos?.map((tipo) => (
+            categorias.push(tipo.nome)
+        ))}
+
+            
+        for(let i = 0; i < categorias.length; i++) {
+            switch(categorias[i]){
+            case 'Whiskys':
+                cards.push(
+                    <Row className={`justify-content-center `}>
+                        <Col xxl="6" xs="6"  className={`${css.slideRight} ${css.backgroud1} d-flex justify-content-center align-items-center mt-5`}>
+                            <h1 className='tituloCard'>Wiskys</h1>                        
+                        </Col>
+                        <Col xxl="7" className={css.slideLeft}>
+                            <TabelaProdutos>{categorias[i]}</TabelaProdutos>
+                        </Col>
                     </Row>
-                ))}
-              </Container>
-        )
-    }
+                    );
+                break;
+            case 'Charutos':
+                cards.push(
+                    <Row className={`justify-content-center `}>
+                        <Col xxl="6" xs="6" className={`${css.slideRight} ${css.backgroud3} d-flex justify-content-center align-items-center mt-5`}>
+                            <h1 className='tituloCard'>Charutos</h1>                        
+                        </Col>
+                        <Col xxl="7" className={css.slideLeft}>
+                            <TabelaProdutos></TabelaProdutos>
+                        </Col>
+                    </Row>
+                    );
+                break;
+            case 'Cigarros':
+                cards.push(
+                    <Row className={`justify-content-center `}>
+	
+                        <Col xxl="6" xs="6" className={`${css.slideRight} ${css.backgroud6} d-flex justify-content-center align-items-center mt-5`}>
+                            <h1 className='tituloCard'>Cigarros</h1>                        
+                        </Col>
+                        <Col xxl="7" className={`${css.slideLeft} mb-5`}>
+                            <TabelaProdutos></TabelaProdutos>
+                        </Col>
+                    </Row>
+                    );
+                break;
+            case 'Drinks':
+                cards.push(
+                    <Row className={`justify-content-center `}>
+	
+                        <Col xxl="6" xs="6" className={`${css.slideRight} ${css.backgroud5} d-flex justify-content-center align-items-center mt-5`}>
+                            <h1 className='tituloCard'>Drinks</h1>                        
+                        </Col>
+                        <Col xxl="7" className={css.slideLeft}>
+                            <TabelaProdutos></TabelaProdutos>
+                        </Col>
+                    </Row>
+                    );
+                break;
+            case 'Comidas':
+                cards.push(
+                    <Row className={`justify-content-center `}>
+	
+                        <Col xxl="6" xs="6" className={`${css.slideRight} ${css.backgroud2} d-flex justify-content-center align-items-center mt-5`}>
+                            <h1 className='tituloCard'>Comidas</h1>                        
+                        </Col>
+                        <Col xxl="7" className={css.slideLeft}>
+                            <TabelaProdutos></TabelaProdutos>
+                        </Col>
+                    </Row>
+                    );
+                break;
+            case 'OutrasBebidas':
+                cards.push(
+                    <Row className={`justify-content-center `}>
+	
+                        <Col xxl="6" xs="6" className={`${css.slideRight} ${css.backgroud4} d-flex justify-content-center align-items-center mt-5`}>
+                            <h1 className='tituloCard'>Bebidas</h1>                        
+                        </Col>
+                        <Col xxl="7" className={css.slideLeft}>
+                            <TabelaProdutos></TabelaProdutos>
+                        </Col>
+                    </Row>
+                    );
+                break;
+            default:
+                console.log(`deu ruim`);
+            }
+        }
+                    
+        // console.log(cards);
+
+        const app = (
+            <Container className={css.containerAC} fluid>
+                {cards}
+            </Container>
+        );
+        
+        return app;
+}

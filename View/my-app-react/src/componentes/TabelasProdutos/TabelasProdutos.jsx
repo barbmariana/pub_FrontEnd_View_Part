@@ -1,55 +1,55 @@
-import React from 'react';
-import { Container, Button, UncontrolledCollapse, Card, CardBody, Col, Row, Table } from 'reactstrap';
+import { Container, Button, UncontrolledCollapse, Col, Row, Table } from 'reactstrap';
+import React, {useEffect, useState} from 'react';
 import './tabelasProdutos.css'
+import api from '../../Api/Api';
 
-class TabelasProdutos extends React.Component {
 
+export default function TabelasProdutos (categoria) {
+    const [produtos, setProduto] = useState();
 
-    render() {
-        return (
-            <Container className="containerTP" fluid>
-                <Row>
-                    <Col sm="8"></Col>
-                    <Col>
-                        <Button color="primary" id="toggler" style={{marginBottom: '1rem'}}>Toggle</Button>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <UncontrolledCollapse toggler="#toggler">
-                            <Table borderless>
-                                <thead>
-                                    <tr>
-                                        <th>First Name</th>
-                                        <th>Last Name</th>
-                                        <th>Username</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Larry</td>
-                                        <td>the Bird</td>
-                                        <td>@twitter</td>
-                                    </tr>
-                                </tbody>
-                            </Table>
-                        </UncontrolledCollapse>
-                    </Col>
-                    <Col sm="1"></Col>
-                </Row>
-            </Container>
-        )
-    }
+    useEffect(() => {
+        api.get('Whiskys')
+        .then((res) => setProduto(res.data))
+        .catch((err) => console.log(err));
+    }, []);
+    
+    console.log(categoria.toString())
+    
+    return (
+        <Container className="containerTP" fluid>
+            <Row className={`justify-content-center `}>
+                <Col xxl="10" xs="12">
+                    <Button className="btnTable" color="primary" id="as" style={{marginBottom: '1rem'}}>Menu</Button>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <UncontrolledCollapse toggler="#as">
+                        <Table borderless>
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Idade</th>
+                                    <th>Tamanho</th>
+                                    <th>Estilo</th>
+                                    <th>Valor</th>
+                                </tr>
+                            </thead>
+                        {produtos?.map((produto) => (
+                            <tbody key={produto.id}>
+                                <tr>
+                                    <td>{produto.Nome}</td>
+                                    <td>{produto.Idade} anos</td>
+                                    <td>{produto.Tamanho}</td>
+                                    <td>{produto.Estilo}</td>
+                                    <td>{produto.Preço},00</td>
+                                </tr>
+                            </tbody>
+                        ))}
+                        </Table>
+                    </UncontrolledCollapse>
+                </Col>
+            </Row>
+        </Container>
+    )
 }
-
-export default TabelasProdutos;

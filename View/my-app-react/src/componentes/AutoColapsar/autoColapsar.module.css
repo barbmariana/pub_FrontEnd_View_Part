@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+	font-family: Poppins;
+}
+
+.backgroud1{
+	background-image: url('../../assets/images/whisky.jpg');
+}
+.backgroud2{
+	background-image: url('../../assets/images/comida.png');
+}
+.backgroud3{
+	background-image: url('../../assets/images/charuto.png');
+}
+.backgroud4{
+	background-image: url('../../assets/images/bebida.png');
+}
+.backgroud5{
+	background-image: url('../../assets/images/drink.png');
+}
+.backgroud6{
+	background-image: url('../../assets/images/cigarro.png');
+}
+
+.containerAC {
+	background-image: url('../../assets/images/marcasBack.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.card-1 {
+	margin-top: 100px !important;
+}
+
+.img{
+	border-radius: 10px;
+}
+
+.slideRight {
+	height: 200px;
+	color: rgba(211, 218, 213, 0.815);
+	text-align: center;
+	padding: 0 !important;
+	border-radius: 15px;
+	box-shadow: 10px 10px 15px #031615;
+
+	animation-name: slideRight;
+	-webkit-animation-name: slideRight;	
+	
+	animation-duration: 1s;	
+	-webkit-animation-duration: 2s;
+	
+	visibility: visible !important;	
+}
+
+.slideRight h1{
+	font-size: 130px !important;
+	letter-spacing: 3px;
+}
+
+@keyframes slideRight {
+	0% {
+		transform: translateX(-150%);
+	}			
+	100% {
+		transform: translateX(0%);
+	}	
+}
+
+@-webkit-keyframes slideRight {
+	0% {
+		transform: translateX(-150%);
+	}			
+	100% {
+		transform: translateX(0%);
+	}	
+}
+
+.slideLeft  {
+	animation-name: slideLeft;
+	-webkit-animation-name: slideLeft;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 2s;
+
+	visibility: visible !important;	
+}
+
+@keyframes slideLeft {
+	0% {
+		transform: translateX(150%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+@-webkit-keyframes slideLeft {
+	0% {
+		transform: translateX(150%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
