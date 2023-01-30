@@ -14,6 +14,7 @@ class Modal extends React.Component {
         this.props.color;
         this.props.classModal;
         this.props.id;
+        this.props.title;
     }
 
     render() {
@@ -26,7 +27,7 @@ class Modal extends React.Component {
                             <IoMdCloseCircle fill="true" size={25} />
                         </button>
                     </div>
-                    <p>Login ou senha estão incorretos. Caso persista você pode não conter permissão ou acesso a esta página entre em contato com os responsáveis.</p>
+                    <p>{this.props.title}</p>
                 </Col>
             </Row>
         )

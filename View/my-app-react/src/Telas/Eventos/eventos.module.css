@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+
+.titulo{
+    color: #32434a;
+    font-family: 'Almarai', sans-serif;
+    font-weight: 800;
+    margin-top: 100px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.522);
+}

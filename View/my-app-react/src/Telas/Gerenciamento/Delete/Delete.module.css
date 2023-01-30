@@ -1,0 +1,48 @@
+.container {
+    height: 100%;
+    background-image: url("../../../assets/images/bgAdministrador.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: fill;
+}
+
+.Input {
+    border: 0 !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.247) !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    color: #fff !important;
+}
+
+
+.Input:focus:placeholder-shown {
+    font-size: 10pt;
+}
+
+.Input::placeholder {
+    color: rgba(255, 255, 255, 0.705) !important;
+}
+
+.colH1 h1 {
+    color: #fff;
+}
+
+.colButtonBack button {
+    width: 3rem;
+    height: 3rem;
+    border: 0;
+    background: transparent;
+}
+
+.colButtonBack button svg {
+    width: 2rem;
+    height: 2rem;
+    fill: #fff;
+}
+
+.colButtonBack button svg:active {
+    transition: all ease 0.2s;
+    width: 1.3rem;
+    height: 1.3rem;
+    opacity: .8;
+}
