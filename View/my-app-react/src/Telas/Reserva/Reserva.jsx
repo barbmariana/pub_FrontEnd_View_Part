@@ -37,7 +37,7 @@ class Reserva extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const url = 'https://pubresiliajson.onrender.com/Reserva';
+    const url = 'https://resiliamodulo3.onrender.com/Reserva';
 
     const reserva = {
       cliente: this.state.cliente,
@@ -48,13 +48,13 @@ class Reserva extends React.Component {
     };
     console.log(reserva);
 
-    // fetch(url, {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(reserva),
-    // });
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(reserva),
+    });
 
   }
 
@@ -100,7 +100,9 @@ class Reserva extends React.Component {
 
       <Container fluid className={`p-3 justify-content-center ${style['box']}`} >
         <h1 className={`${style['title']}`} >Formulário de Reserva</h1>
+
         <Container className={`p-3 justify-content-center`} >
+
           <form className={`${style['box-form']}`} onSubmit={this.handleSubmit} >
 
             <Row className="m-2 p-3">
@@ -145,6 +147,7 @@ class Reserva extends React.Component {
               </Row>
 
             </Container>
+            
             <Row className="m-2 p-3">
               <select
                 onChange={({ target }) => this.setState({ numeroMesa: target.value })}

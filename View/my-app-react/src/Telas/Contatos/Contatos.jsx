@@ -1,6 +1,8 @@
 import React from "react";
 // bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
+// bootstrap icons
+import 'bootstrap-icons/font/bootstrap-icons.css';
 // reactstrap
 import { Container, Row, Col } from "reactstrap";
 //css
@@ -10,43 +12,74 @@ import style from './contatos.module.css';
 class Contatos extends React.Component {
   constructor(props) {
     super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(e){
+    e.preventDefault();
   }
 
   render() {
     return (
-      <Container fluid className={` p-5 justify-content-center ${style['box']}`} >
-        <Row>
-          <Col className={`col-md-6 p-3 justify-content-center ${style['contact-sections']} `}>
+      <Container fluid className={`${style['box']}`}>
+
+        <Row className={`${style['contact-box']}`} >
+
+          <Col className={`${style['form-box']}`} >
             <Row>
-              <p className="h3 text-center" >Entre em contato</p>
+              <p className="h2" >Entre em contato</p>
             </Row>
-            <form>
-              <Row className="m-2">
-                <Col className="col-6" >
-                  <input className="form-control" type="text" placeholder="Nome" />
-                </Col>
-                <Col className="col-6" >
-                  <input className="form-control" type="text" placeholder="Email" />
-                </Col>
-              </Row>
-              <Container>
-                <Row className="m-2 w-100">
-                  <input className="form-control" type="text" placeholder="Assunto" />
+
+            <Row>
+
+              <form onSubmit={this.handleSubmit} >
+                <Row>
+                  <input required className={`form-control `} type="text" placeholder="Nome:" />
                 </Row>
-              </Container>
-              <Row className="m-2">
-                <textarea className="form-control" rows="3" placeholder="Mensagem"></textarea>
-              </Row>
-              <Row className="justify-content-center" >
-                <button className="btn btn-primary w-auto" type="submit">Enviar</button>
-              </Row>
-            </form>
+                <Row>
+                  <input required className={`form-control `} type="email" placeholder="Email:" />
+                </Row>
+                <Row>
+                  <input required className={`form-control `} type="text" placeholder="Assunto:" />
+                </Row>
+                <Row>
+                  <textarea required className="form-control" rows="3" placeholder="Mensagem"></textarea>
+                </Row>
+                <Row className="justify-content-center" >
+                  <button className={`btn ${style['contato-btn']} w-auto`}> Enviar</button>
+                </Row>
+
+              </form>
+
+            </Row>
+
           </Col>
 
-          {/* redes sociais emails */}
-          <Col className={`col-md-6 ${style['contact-sections']} `}>
-            a
+          <Col className={`${style['social-box']}`} >
+            <Row><p className={`h2 ${style['h2']}`} >Outros meios</p></Row>
+
+            <Col className={`${style['social-box-content']}`} >
+              <Row className="m-2" >
+                <p className={` ${style['secondary-title']}`} >Nosso email </p>
+                <p className={`${style['info']}`}>shelby@pubblinders.com</p>
+              </Row>
+
+              <Row className={` m-2 text-center ${style['social-icons']}`} >
+                <p className={` ${style['secondary-title']}`} >Conheça nossas redes sociais</p>
+                <i className="bi bi-instagram"></i>
+                <i className="bi bi-twitter"></i>
+                <i className="bi bi-youtube"></i>
+                <i className="bi bi-whatsapp"></i>
+              </Row>
+
+              <Row className="m-2">
+                <p className={` ${style['secondary-title']}`} >Nosso endereço</p>
+                <p className={`${style['info']}`}>avenida bla bla bla</p>
+              </Row>
+            </Col>
+
           </Col>
+
         </Row>
 
       </Container>
