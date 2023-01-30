@@ -184,7 +184,7 @@ class Update extends React.Component {
                     break;
 
                 case "Comidas":
-                    axios.put(`https://pubresiliajson.onrender.com/${this.state.option}`, {
+                    axios.put(`https://pubresiliajson.onrender.com/${this.state.option}/${this.state.id}`, {
                         "Nome": this.arrayBody[0],
                         "Sobre": this.arrayBody[1],
                         "Preço": this.arrayBody[2],
@@ -199,7 +199,7 @@ class Update extends React.Component {
                     break;
 
                 case "Charutos":
-                    axios.put(`https://pubresiliajson.onrender.com/${this.state.option}`, {
+                    axios.put(`https://pubresiliajson.onrender.com/${this.state.option}/${this.state.id}`, {
                         "Nome": this.arrayBody[0],
                         "Origem": this.arrayBody[1],
                         "Força": this.arrayBody[2],
@@ -214,7 +214,7 @@ class Update extends React.Component {
                     break;
 
                 case "Outras Bebidas":
-                    axios.put(`https://pubresiliajson.onrender.com/OutrasBebidas`, {
+                    axios.put(`https://pubresiliajson.onrender.com/OutrasBebidas/${this.state.id}`, {
                         "Nome": this.arrayBody[0],
                         "Foto": this.arrayBody[1],
                         "Preço": this.arrayBody[2],
@@ -230,7 +230,7 @@ class Update extends React.Component {
 
                 case "Drinks":
 
-                    axios.put(`https://pubresiliajson.onrender.com/${this.state.option}`, {
+                    axios.put(`https://pubresiliajson.onrender.com/${this.state.option}/${this.state.id}`, {
                         "name": this.arrayBody[0],
                         "unit": this.arrayBody[1],
                         "description": this.arrayBody[2],
@@ -246,7 +246,7 @@ class Update extends React.Component {
                     break;
 
                 case "Cigarros":
-                    axios.put(`https://pubresiliajson.onrender.com/${this.state.option}`, {
+                    axios.put(`https://pubresiliajson.onrender.com/${this.state.option}/${this.state.id}`, {
                         "tipo": this.arrayBody[0],
                         "descricao": this.arrayBody[1],
                         "versao": this.arrayBody[2],
@@ -283,7 +283,7 @@ class Update extends React.Component {
                 </Row>
                 <Row className='text-center'>
                     <Col className={`${style.colH1} my-5`}>
-                        <h1>Adicionar Item</h1>
+                        <h1>Atualize o item</h1>
                     </Col>
                 </Row>
                 <Row >

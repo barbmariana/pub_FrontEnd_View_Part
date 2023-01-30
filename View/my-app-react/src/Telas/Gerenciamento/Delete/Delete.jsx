@@ -73,7 +73,7 @@ class Delete extends React.Component {
                 </Row>
                 <Row className='text-center'>
                     <Col className={`${style.colH1} my-5`}>
-                        <h1>Adicionar Item</h1>
+                        <h1>Delete o item</h1>
                     </Col>
                 </Row>
                 <Row >
