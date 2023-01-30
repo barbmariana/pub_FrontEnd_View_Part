@@ -17,6 +17,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-decoration-line: none;
 
 }
 
@@ -29,10 +30,14 @@
 .footer1 a:visited{
     color: white;
     text-decoration: none;
+    text-decoration-line: none;
+
 }
 .footer1 a:hover{
     color: white;
     text-decoration: none;
+    text-decoration-line: none;
+
 
 }
 
@@ -41,10 +46,12 @@
     font-size: 15px;
     color: white;
     margin:5px 0;
+    text-decoration: none;
 }
 
-a{
+li a{
     text-decoration: none;
+
 }
 
 
