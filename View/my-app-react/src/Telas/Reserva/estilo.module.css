@@ -1,0 +1,44 @@
+.title {
+  text-align: center;
+  color: #ccc;
+}
+
+.box {
+  background-image: url(../../assets/images/reservaBg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: fill;
+}
+
+.box-form input,
+.box-form select {
+  color: #000;
+  font-weight: bold;
+  background: #ccc;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.box-form input::placeholder {
+  color: #000;
+  font-weight: bold;
+}
+
+.box-form input:focus {
+  color: #000;
+  background: #ccc;
+}
+
+.box-form label {
+  color: #fff;
+}
+
+.reserva-btn {
+  background-color: #18A078;
+  color: #fff;
+}
+
+.reserva-btn:hover {
+  background-color: #18A078;
+  color: #fff;
+}

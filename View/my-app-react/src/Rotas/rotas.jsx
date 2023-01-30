@@ -2,10 +2,12 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from '../Telas/Home/Home';
 import Eventos from '../Telas/Eventos/Evento';
+import Reserva from '../Telas/Reserva/Reserva'
 import Template from '../componentes/Template/Template';
 import Produtos from '../Telas/Produtos/Pordutos';
 
 import RouterAdministrador from '../Telas/Administrador/Administrador';
+import Contatos from '../Telas/Contatos/Contatos';
 import Gerenciamento from '../Telas/Gerenciamento/Gerenciamento';
 import RouterCreate from '../Telas/Gerenciamento/Create/Create';
 import RouterDelete from '../Telas/Gerenciamento/Delete/Delete';

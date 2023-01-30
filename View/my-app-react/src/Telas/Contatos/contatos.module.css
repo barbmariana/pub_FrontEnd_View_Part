@@ -1,0 +1,91 @@
+.box {
+  padding: 15px;
+  background-image: url(../../assets/images/carrossel3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: fill;
+}
+
+.form-box p {
+  text-transform: uppercase;
+  color: #ccc;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+.form-box form,
+.social-box-content {
+  padding: 50px;
+}
+
+.form-box form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-box input,
+.form-box textarea {
+  margin: 20px 10px;
+  background-color: #ccc;
+  width: 300px;
+  color: black;
+  font-weight: bold;
+  border: 2px solid black;
+}
+
+.form-box input::placeholder,
+.form-box textarea::placeholder {
+  color: black;
+}
+
+.form-box input:focus,
+.form-box textarea:focus {
+  color: black;
+  background-color: #ccc;
+}
+
+.contato-btn {
+  background-color: #18A078;
+  color: #fff;
+}
+
+.contato-btn:hover {
+  background-color: #18A078;
+  color: #fff;
+}
+
+.social-box .h2 {
+  color: #ccc;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.secondary-title {
+  text-align: center;
+  text-transform: uppercase;
+  color: #031615;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.info {
+  text-transform: lowercase;
+  text-align: center;
+  color: #ccc;
+}
+
+.social-icons {
+  display: block;
+}
+
+.social-icons i {
+  font-size: 40px;
+  color: #ccc;
+}
