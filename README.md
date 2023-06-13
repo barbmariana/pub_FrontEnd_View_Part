@@ -1,6 +1,6 @@
 # React Website - Pub Blinders 💻	
 
-Creating a website using React for a new pub bar and use a JSON server to make HTTP requests.
+Creating a website using React for a new pub bar and using a JSON server to make HTTP requests.
 
 (pt-br)
 Criação de website usando o react para um novo pub e uso de um JSON server para fazer requisições HTTP.  
@@ -11,7 +11,7 @@ Link JSON SERVER: https://pubresiliajson.onrender.com/
 The project is a web page for a pub bar using only React components. Our bar is a Peaky Blinders inspired pub. At our Admistration page, you can make request to our own JSON server.
 
 (pt-br)
-Utilizando React components, construimos um website para um pub. Nosso pub tem inspiração na série Peak Blinders. Na nossa página de admistrador, você pode fazer requisições para o nosso próprio JSON server. 
+Utilizando React components construimos um website para um pub. Nosso pub tem inspiração na série Peak Blinders. Na nossa página de admistrador, você pode fazer requisições para o nosso próprio JSON server. 
 
 
 
@@ -42,30 +42,29 @@ Wesley: github.com/wesleyrick <br>
 <img align="center" alt="vscode" height="30" width="40" src="https://user-images.githubusercontent.com/25181517/182618272-390ab138-7b29-44a0-85a2-62633957d815.png">
 
 ## :page_with_curl: Docs para Criar, Deletar e Atualizar siga o :blue_book: passo a passo. 
-- Vá até a o final da pagina é click no link de "Administrador"
+- Vá até a o final da pagina e click no link de "Administrador"
 - Você cairá na tela de login. use o login: Resilia e a senha: Resilia.
-- A próxima página sera a de Adm escolha um dos metodos.
+- A próxima página sera a de Adm. Escolha um dos metodos.
 
 ## Criar Item :hammer:
 - Escolha uma das categorias pra criar o produto.
 - Prencha todos os campos corretamente. *Observação: todo campo "Preço" recebe um número. caso for usar número decimal não use virgula exemplo: 2.50* .
-- Caso preencha todos os campos corretamente e click o botão "Confirmar", irá aparecer um alerta dizendo que o produto foi criado com sucesso.
-- Para ver o produto criado no banco, click nessa url: https://pubresiliajson.onrender.com/.
+- Caso preencha todos os campos corretamente e clique o botão "Confirmar", aparecerá um alerta dizendo que o produto foi criado com sucesso.
+- Para ver o produto criado no banco, clique nessa url: https://pubresiliajson.onrender.com/.
 - No link acessado acima vá até a sessão "Resources" e escolha a categoria ultilizada para criar o item anteriormente.
 - Aparecerá uma tela com os itens do banco de dados em ordem de criação crescente.
 
 ## Atualizar/Alterar :bookmark_tabs: :black_nib:
-- Essa página é parecida com a da criação de item.
 - Você verá um novo campo chamado id com um botão de busca.
-- Utilize a url https://pubresiliajson.onrender.com/ e na sessão "Resources" click em uma categoria que trará os resultados da pesquisa.
+- Utilize a url https://pubresiliajson.onrender.com/ e na sessão "Resources" clique em uma categoria que trará os resultados da pesquisa.
 - No resultado haverá itens com suas especificações uma delas será o número de identificação vulgo "id".
 - Escolha um "id" e busque por ele no "campo de busca" do app.
 - Teste alterando algum campo do item.
-- *Observação:Antes de "confirmar" é preciso clickar em todos os campos para assim garatir que os campos que deseja deixar como estavam antes continuem com o mesmo valor.*
+- *Observação:Antes de "confirmar" é preciso clicar em todos os campos para assim garatir que os campos que deseja deixar como estavam antes continuem com o mesmo valor.*
 - Após os passos acima é só confirmar e visualizar a alterção no banco pela url: https://pubresiliajson.onrender.com/.
 
 ## Remover Item :x:
 - É uma página bem simples com apenas 2 campos.
-- O primeiro campo seleciona a categoria, E o segundo é para digitar o indentificador "id" do item que queira excluir.
+- O primeiro campo seleciona a categoria, e o segundo é para digitar o indentificador "id" do item que queira excluir.
 - Use como exemplo o item que criou anteriormente e utilize o "id" do mesmo.
-- Agora para ver se o item foi excluído copie nessa url: https://pubresiliajson.onrender.com/ e vá ae a categoria que criou.
+- Agora para ver se o item foi excluído copie nessa url: https://pubresiliajson.onrender.com/ e vá na categoria que criou.
