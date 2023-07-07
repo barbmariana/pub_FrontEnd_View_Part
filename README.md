@@ -4,6 +4,7 @@ Creating a website using React for a new pub bar and using a JSON server to make
 
 (pt-br)
 Criação de website usando o react para um novo pub e uso de um JSON server para fazer requisições HTTP.  
+<br>
 Link JSON SERVER: https://pubresiliajson.onrender.com/
 
 
